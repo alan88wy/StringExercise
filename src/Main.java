@@ -30,9 +30,9 @@ public class Main {
     System.out.println("Currency Format : " + currencyF.format(doubleValue));
 
 
-    // Custom Formating
+    // Custom Formating - 0 or # can be use
 
-    var df = new DecimalFormat("SGD 00,00.00");
+    var df = new DecimalFormat("SGD #0,00.00");
     System.out.println("Currency Format : " + df.format(doubleValue));
 
   }
