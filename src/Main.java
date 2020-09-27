@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
 
@@ -23,9 +25,15 @@ public class Main {
     var nLocaleFormater = NumberFormat.getCurrencyInstance(nLocale);
     System.out.println("Number - SG : " + nLocaleFormater.format(doubleValue));
 
-    var currencyF = NumberFormat.getCurrencyInstance();
+    var currencyF = NumberFormat.getCurrencyInstance(nLocale);
 
     System.out.println("Currency Format : " + currencyF.format(doubleValue));
+
+
+    // Custom Formating
+
+    var df = new DecimalFormat("SGD 00,00.00");
+    System.out.println("Currency Format : " + df.format(doubleValue));
 
   }
 }
