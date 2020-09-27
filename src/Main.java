@@ -18,6 +18,11 @@ public class Main {
 
     System.out.println("Number - local : " + localeFormater.format(doubleValue));
 
+    var nLocale = new Locale("En", "SG");
+
+    var nLocaleFormater = NumberFormat.getCurrencyInstance(nLocale);
+    System.out.println("Number - SG : " + nLocaleFormater.format(doubleValue));
+
     var currencyF = NumberFormat.getCurrencyInstance();
 
     System.out.println("Currency Format : " + currencyF.format(doubleValue));
